@@ -1,0 +1,27 @@
+/*
+🔹 Problem: 283. Move Zeroes
+🔗 Platform: LeetCode
+🔗 Link: https://leetcode.com/problems/concatenation-of-array/description/
+✅ Status: Solved
+Description: Given an integer array nums, move all's to the end of it while maintaining the relative order of the non-zero elements. Note that you must do this in-place without making a copy of the array.
+
+🧾 Notes: Just A simple approach where Non zero elements are added to one array and zeros added to another array, again they are added back to the original array and returned.
+*/
+
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+      int n=2*nums.length;
+      int[] arr = new int[n];
+      int a=0;
+
+      for(int i=0;i<nums.length;i++)
+      {
+        arr[a++]=nums[i];
+      }  
+      for(int i=0;i<nums.length;i++)
+      {
+        arr[a++]=nums[i];
+      }
+      return arr;
+    }
+}

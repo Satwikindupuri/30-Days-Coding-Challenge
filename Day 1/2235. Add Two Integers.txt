@@ -1,0 +1,17 @@
+/*
+🔹 Problem: 2235. Add Two Integers
+🔗 Platform: LeetCode
+🔗 Link: https://leetcode.com/problems/add-two-integers/description/
+✅ Status: Solved
+Description: Given two integers num1 and num2, return the sum of the two integers.
+
+🧾 Notes: Just A simple approach where just added two numbers using additional operator
+*/
+
+
+class Solution {
+    public int sum(int num1, int num2) {
+        int sum=num1+num2;
+        return sum;
+    }
+}
