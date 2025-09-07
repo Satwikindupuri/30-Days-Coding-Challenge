@@ -1,0 +1,31 @@
+/*
+🔹 Problem: 268. Missing Number
+🔗 Platform: Leetcode
+🔗 Link: https://leetcode.com/problems/missing-number/description/
+✅ Status: Solved
+Description: Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+🧾 Notes: Used new array and store the elements and compared to return the missing element
+*/
+
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n=nums.length;
+        int[] arr=new int[n+1];
+        for(int i=0;i<=n;i++)
+        {
+            //int n=arr[i];
+            arr[i]=i;
+        }
+        Arrays.sort(nums);
+        Arrays.sort(arr);
+        for(int i=0;i<n;i++)
+        {
+            if(nums[i]!=arr[i])
+            {
+                return arr[i];
+            }
+        }
+        return arr[n];
+    }
+}
